@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: competitor_prices_daily
+    description: 'Competitor prices filtered by date and by active store. And also show just 1 price for a product/day.'
+  - name: competitor_prices_clean
+    description: 'Filters competitor prices, with just the mapped products.'
+    columns:
+      - name: product_id
+        tests:
+          - relationships:   # Tests if every product in this table is in the product map
+              to: ref('stg_product_map')
+              field: product_id
+  - name: internal_prices_clean
+    description: 'Actual price for a store, based on its center and distribution channel'

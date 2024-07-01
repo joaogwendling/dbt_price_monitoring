@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_stores
+    columns:
+      - name: competitor_id
+        description: 'Primary key. Orders the competitors in the dashboard'
+        tests:
+          - unique
+          - not_null
+  - name: stg_products
+  - name: stg_product_map
+  - name: stg_internal_prices
+  - name: stg_competitor_prices

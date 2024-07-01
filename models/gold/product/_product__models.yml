@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: products_unique
+    description: 'Product dimension. One product each line'
+    columns:
+      - name: product_id
+        description: 'Primary key'
+        tests:
+          - unique
+          - not_null

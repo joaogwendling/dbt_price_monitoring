@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: db
+    database: ecommerce_dev
+    schema: dbo
+    tables:
+      - name: ref_concorrentes
+        description: 'Info about the stores, both internal and from competitors. One row per unit/origin from a competitor'
+      - name: dados_raspagem
+        description: 'Info about competitors products prices'
+      - name: sap_precos
+        description: 'Info about internal products prices'
+      - name: sap_arvore_mercadologica
+        description: 'Product info'
+      - name: depara_manual
+        description: 'Mapping of competitor products with internal products by id'

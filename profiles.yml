@@ -1,0 +1,16 @@
+mtm_precos_model:
+  target: target1 ### Default
+  outputs:
+    target1:
+      type: sqlserver
+      schema: dbt_dev
+      threads: 1
+
+      ### database-specific connection details
+      driver: 'ODBC Driver 17 for SQL Server'
+      server: zffdeva1-sti-adb-001.database.windows.net
+      database: ecommerce_dev
+      authentication: 'sql'
+      UID: 'E_Commerce_DEV_RW'
+      PWD: 'ECOM!write00'
+
